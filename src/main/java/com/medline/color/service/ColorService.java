@@ -1,5 +1,9 @@
 package com.medline.color.service;
 
+
+
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,5 +20,15 @@ public class ColorService {
 		
 		return colorrepository.save(color);
 	}
+	public List<Color> fetchColorList() {
+		// TODO Auto-generated method stub
+		return colorrepository.findAll();
+	}
+	public Color fectchColorById(Long colorById) {
+		// TODO Auto-generated method stub
+		return colorrepository.findById(colorById).get();
+	
+	
 
+}
 }
